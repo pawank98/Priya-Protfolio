@@ -1,0 +1,57 @@
+
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Me</title>
+  <link rel="stylesheet" href="../css/contact.css" />
+    <script src="../js/rendernavbar.js" defer></script>
+</head>
+
+<body>
+  <div id="navbar-container"></div><!--renders navbar-->
+
+
+  <!-- Contact Form -->
+  <main class="contact-main">
+    <h1 class="contact-title">Contact Me</h1>
+    <form class="contact-form" action="#" method="POST">
+      <label for="name">Name *</label>
+      <input type="text" id="name" name="name" placeholder="Your Name..." required />
+
+      <label for="email">Email Address *</label>
+      <input type="email" id="email" name="email" placeholder="Your Email Address..." required />
+
+      <label for="message">Message *</label>
+      <textarea id="message" name="message" rows="6" placeholder="Your Message..." required></textarea>
+
+      <button type="submit" class="btn-submit">Send Message</button>
+    </form>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer__icons">
+      <a href="https://instagram.com" aria-label="Instagram" target="_blank">
+        <img src="../images/instagram.png" alt="Instagram" />
+      </a>
+      <a href="https://linkedin.com" aria-label="LinkedIn" target="_blank">
+        <img src="../images/linkedin.png" alt="LinkedIn" />
+      </a>
+      <a href="mailto:your-email@example.com" aria-label="Email">
+        <img src="../images/gmail.png" alt="Email" />
+      </a>
+      <a href="mailto:your-email@example.com" aria-label="Email">
+        <img src="../images/behance.png" alt="Email" />
+      </a>
+      <a href="mailto:your-email@example.com" aria-label="Email">
+        <img src="../images/facebook.png" alt="Email" />
+      </a>
+    </div>
+    <div class="footer-text">© 2025 Priya Kharel</div>
+    
+  </footer>
+  </main>
+</body>
+</html>

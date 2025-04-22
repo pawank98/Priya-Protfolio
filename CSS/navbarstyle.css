@@ -1,0 +1,146 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Navigation bar styling */
+.nav {
+  height: 3.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  background-color: #15203a;
+  font-size: large;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+/* Logo container */
+.nav__logo {
+  padding-left: 1rem;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+/* Logo image */
+.nav__logo img {
+  height: 95%;
+  width: auto;
+  object-fit: contain;
+  max-height: 100%;
+}
+
+/* Navigation menu (desktop) */
+.nav__menu ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.nav__menu ul li {
+  list-style: none;
+}
+
+.nav__menu ul li a {
+  text-decoration: none;
+  color: #fff;
+  padding: 1rem;
+  display: block;
+}
+
+.nav__menu li:hover {
+  background-color: rgba(195, 52, 52, 0.5);
+  cursor: pointer;
+}
+
+/* Hamburger icon */
+.nav__hamburger {
+  width: 1.875rem;
+  height: 1.313rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.nav__hamburger__line {
+  height: 0.188rem;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 0.625rem;
+  transition: all 0.3s ease;
+}
+
+/* Media Query: Mobile styles */
+@media screen and (max-width: 550px) {
+  .nav__hamburger {
+    display: flex;
+  }
+
+  .nav {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .nav__menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #eec556;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 999;
+    transition: top 0.4s ease-in-out;
+  }
+
+  .nav__menu.active {
+    display: flex;
+  }
+
+  .nav__menu ul {
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    gap: 2rem;
+  }
+
+  .nav__menu ul li {
+    text-align: center;
+    width: 100%;
+  }
+
+  .nav__menu ul li a {
+    padding: 1rem;
+    font-size: 1.5rem;
+    display: block;
+    color: white;
+  }
+
+  /* Hamburger animation to X */
+  .nav__hamburger.active .nav__hamburger__line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .nav__hamburger.active .nav__hamburger__line:nth-child(2) {
+    opacity: 0;
+  }
+
+  .nav__hamburger.active .nav__hamburger__line:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+}
